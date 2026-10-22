@@ -447,6 +447,171 @@
         section.block { padding-top: 18px; }
       }
     </style>
+    <style>
+      /* ---------- Visual enhancement layer (professional polish, content unchanged) ---------- */
+      ::selection { background: var(--accent-soft); color: var(--accent-ink); }
+      a:focus-visible, button:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; border-radius: 4px; }
+
+      /* Masthead becomes a deep-green hero */
+      .masthead {
+        background:
+          radial-gradient(900px 340px at 85% -60px, rgba(212,169,78,0.20), rgba(212,169,78,0) 60%),
+          radial-gradient(700px 380px at -10% 110%, rgba(255,255,255,0.10), rgba(255,255,255,0) 55%),
+          linear-gradient(135deg, #0e3d2e 0%, #175e4c 55%, #1d7261 100%);
+        border-bottom: 4px solid var(--gold);
+        color: #f2f5f1;
+      }
+      .masthead .name { color: #ffffff; letter-spacing: 0.2px; }
+      .masthead .role-line { color: #e9d9ae; font-weight: 600; }
+      .masthead .contact-row .item {
+        display: inline-flex; align-items: center;
+        background: rgba(255,255,255,0.10);
+        border: 1px solid rgba(255,255,255,0.24);
+        border-radius: 999px;
+        padding: 4px 13px;
+        margin: 0 6px 8px 0;
+        color: #f2f5f1;
+        backdrop-filter: blur(2px);
+      }
+      .masthead .contact-row a { color: #ffffff; text-decoration: none; font-weight: 600; }
+      .masthead .contact-row a:hover { color: #e9d9ae; text-decoration: underline; }
+      .masthead .avail {
+        background: rgba(255,255,255,0.14);
+        color: #ffffff;
+        border: 1px solid rgba(255,255,255,0.30);
+      }
+      .masthead .avail .dot { background: #8fe3b8; animation: pulse 2.4s ease-in-out infinite; }
+      @keyframes pulse {
+        0%, 100% { box-shadow: 0 0 0 0 rgba(143,227,184,0.45); }
+        50% { box-shadow: 0 0 0 6px rgba(143,227,184,0); }
+      }
+
+      /* Stats strip inside hero */
+      .hero-stats {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 14px;
+        margin-top: 28px;
+      }
+      .hero-stat {
+        background: rgba(255,255,255,0.09);
+        border: 1px solid rgba(255,255,255,0.20);
+        border-radius: 12px;
+        padding: 14px 16px;
+      }
+      .hero-stat .num {
+        display: block;
+        font-family: "Source Serif 4", Georgia, serif;
+        font-size: 1.55rem;
+        font-weight: 700;
+        color: #ffffff;
+        line-height: 1.15;
+      }
+      .hero-stat .lbl { display: block; font-size: 0.88rem; color: #d8e2da; margin-top: 3px; }
+      @media (max-width: 720px) { .hero-stats { grid-template-columns: 1fr 1fr; } }
+
+      /* Sticky nav gains a soft shadow */
+      .nav { box-shadow: 0 4px 14px rgba(30,36,32,0.07); }
+      .nav a { transition: background-color 0.25s ease, color 0.25s ease; }
+
+      /* Section headings: gold accent segment */
+      .sec-head { border-bottom: 1px solid var(--line); position: relative; }
+      .sec-head::after {
+        content: "";
+        position: absolute;
+        left: 0; bottom: -2px;
+        width: 74px; height: 3px;
+        background: var(--gold);
+        border-radius: 2px;
+      }
+      .sec-head h2 { letter-spacing: 0.2px; }
+
+      /* Cards: accent top, gentle lift on hover */
+      .case, .sample, .comp {
+        border-top: 4px solid var(--accent);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .sample { border-top-color: var(--gold); }
+      .case:hover, .sample:hover, .comp:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 4px 6px rgba(30,36,32,0.07), 0 16px 34px rgba(30,36,32,0.12);
+      }
+      .scale {
+        background: linear-gradient(135deg, var(--accent-soft), var(--chip-bg));
+        border: 1px solid var(--line);
+      }
+      .tool { transition: border-color 0.25s ease, background-color 0.25s ease; }
+      .tool:hover { border-color: var(--accent); background: var(--accent-soft); }
+
+      /* Summary markers become small gold diamonds */
+      .summary-list li::before { transform: rotate(45deg); background: var(--gold); border-radius: 1px; }
+
+      /* Experience becomes a timeline */
+      .exp-list { position: relative; margin-left: 8px; padding-left: 26px; border-left: 2px solid var(--line); }
+      .exp { position: relative; border-bottom: none; padding: 14px 0; }
+      .exp::before {
+        content: "";
+        position: absolute;
+        left: -34px; top: 22px;
+        width: 11px; height: 11px;
+        border-radius: 50%;
+        background: var(--surface);
+        border: 3px solid var(--accent);
+      }
+      .exp .when {
+        display: inline-block;
+        background: var(--chip-bg);
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 2px 11px;
+        font-size: 0.88rem;
+        font-weight: 600;
+        color: var(--ink-soft);
+        align-self: start;
+      }
+      @media (max-width: 720px) {
+        .exp-list { margin-left: 4px; padding-left: 20px; }
+        .exp::before { left: -28px; }
+      }
+
+      /* Contact cards lift */
+      .contact-cards a, .contact-cards button { transition: transform 0.25s ease, border-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease; }
+      .contact-cards a:hover, .contact-cards button:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+
+      /* Scroll reveal - subtle and professional */
+      .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.55s ease, transform 0.55s ease; }
+      .reveal.visible { opacity: 1; transform: translateY(0); }
+
+      /* Back to top */
+      #topBtn {
+        position: fixed; right: 18px; bottom: 18px;
+        width: 44px; height: 44px;
+        border: none; border-radius: 50%;
+        background: var(--accent); color: #fff;
+        font-size: 20px; cursor: pointer;
+        box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+        opacity: 0; pointer-events: none;
+        transition: opacity 0.3s ease, background-color 0.3s ease;
+        z-index: 50;
+      }
+      #topBtn.show { opacity: 1; pointer-events: auto; }
+      #topBtn:hover { background: var(--accent-ink); }
+
+      @media (prefers-reduced-motion: reduce) {
+        .reveal { opacity: 1; transform: none; transition: none; }
+        .masthead .avail .dot { animation: none; }
+        .case:hover, .sample:hover, .comp:hover, .contact-cards a:hover, .contact-cards button:hover { transform: none; }
+      }
+      @media print {
+        .masthead { background: #fff; color: var(--ink); border-bottom: 3px solid var(--accent); }
+        .masthead .name, .masthead .role-line, .hero-stat .num { color: var(--ink); }
+        .masthead .contact-row .item, .masthead .avail, .hero-stat { background: none; border-color: var(--line); color: var(--ink); }
+        .hero-stat .lbl, .masthead .contact-row a { color: var(--ink); }
+        #topBtn { display: none; }
+        .reveal { opacity: 1; transform: none; }
+      }
+    </style>
+
   </head>
   <body>
 
@@ -462,6 +627,12 @@
           <span class="item"><a href="https://github.com/rasadariranasinghe" target="_blank" rel="noopener">GitHub</a></span>
         </p>
         <span class="avail"><span class="dot" aria-hidden="true"></span>Available to start immediately</span>
+        <div class="hero-stats" aria-label="Career highlights">
+          <div class="hero-stat"><span class="num">4+ years</span><span class="lbl">Administration, operations and coordination experience</span></div>
+          <div class="hero-stat"><span class="num">200+</span><span class="lbl">Students supported, with 20+ faculty calendars managed</span></div>
+          <div class="hero-stat"><span class="num">200-300</span><span class="lbl">Bank transactions processed per day, with KYC review</span></div>
+          <div class="hero-stat"><span class="num">147,000+</span><span class="lbl">Records maintained across trackers and databases</span></div>
+        </div>
       </div>
     </header>
 
@@ -893,6 +1064,29 @@
           }, { rootMargin: "-30% 0px -60% 0px" });
           sections.forEach(function (s) { obs.observe(s); });
         }
+      })();
+    </script>
+  
+    <button id="topBtn" title="Back to top" aria-label="Back to top">&#8593;</button>
+    <script>
+      (function () {
+        var targets = document.querySelectorAll('section.block, .case, .sample, .comp, footer .wrap');
+        targets.forEach(function (el) { el.classList.add('reveal'); });
+        if ('IntersectionObserver' in window) {
+          var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) {
+              if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+            });
+          }, { threshold: 0.08 });
+          targets.forEach(function (el) { io.observe(el); });
+        } else {
+          targets.forEach(function (el) { el.classList.add('visible'); });
+        }
+        var btn = document.getElementById('topBtn');
+        window.addEventListener('scroll', function () {
+          btn.classList.toggle('show', window.scrollY > 500);
+        });
+        btn.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
       })();
     </script>
   </body>
