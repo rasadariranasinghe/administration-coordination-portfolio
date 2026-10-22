@@ -1,0 +1,899 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="description" content="Portfolio of Rasadari Ranasinghe: administration, program coordination, banking operations, virtual assistance, and records management in Toronto, ON." />
+    <link rel="icon" href="data:," />
+    <title>Rasadari Ranasinghe - Administration and Coordination Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --bg: #f6f5f1;
+        --surface: #ffffff;
+        --surface-2: #efece4;
+        --ink: #1e2420;
+        --ink-soft: #49524c;
+        --ink-faint: #6d766f;
+        --accent: #175e4c;
+        --accent-ink: #0f4636;
+        --accent-soft: #e2efe9;
+        --gold: #a4761b;
+        --line: #ddd8cb;
+        --line-strong: #c9c2b0;
+        --chip-bg: #eef3f0;
+        --shadow: 0 1px 2px rgba(30, 36, 32, 0.06), 0 8px 24px rgba(30, 36, 32, 0.05);
+        color-scheme: light;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #12150f;
+          --surface: #1a1e17;
+          --surface-2: #22271f;
+          --ink: #eceee8;
+          --ink-soft: #c2c8bf;
+          --ink-faint: #98a195;
+          --accent: #7fc4ab;
+          --accent-ink: #a8dcc7;
+          --accent-soft: #22332b;
+          --gold: #d3a94e;
+          --line: #333a30;
+          --line-strong: #454e41;
+          --chip-bg: #232a21;
+          --shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 8px 24px rgba(0, 0, 0, 0.3);
+          color-scheme: dark;
+        }
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+        font-size: 17px;
+        line-height: 1.55;
+        -webkit-font-smoothing: antialiased;
+      }
+      h1, h2, h3, .serif { font-family: "Source Serif 4", Georgia, serif; }
+      a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+      a:hover { color: var(--accent-ink); }
+      .wrap { max-width: 1060px; margin: 0 auto; padding: 0 22px; }
+
+      /* ---------- Masthead ---------- */
+      .masthead {
+        background: var(--surface);
+        border-bottom: 3px solid var(--accent);
+      }
+      .masthead .wrap { padding-top: 44px; padding-bottom: 34px; }
+      .name {
+        margin: 0;
+        font-size: clamp(2.1rem, 5.5vw, 3.1rem);
+        font-weight: 700;
+        letter-spacing: 0.2px;
+        line-height: 1.08;
+      }
+      .role-line {
+        margin: 10px 0 0;
+        font-size: clamp(1.02rem, 2.6vw, 1.22rem);
+        font-weight: 600;
+        color: var(--accent-ink);
+      }
+      .contact-row {
+        margin: 16px 0 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px 18px;
+        color: var(--ink-soft);
+        font-size: 0.98rem;
+      }
+      .contact-row .item { white-space: nowrap; }
+      .contact-row a { color: var(--ink-soft); text-decoration: none; border-bottom: 1px solid var(--line-strong); }
+      .contact-row a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+      .avail {
+        margin-top: 20px;
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        background: var(--accent-soft);
+        color: var(--accent-ink);
+        font-weight: 600;
+        font-size: 0.95rem;
+        padding: 7px 14px 7px 11px;
+        border-radius: 999px;
+      }
+      .avail .dot {
+        width: 9px; height: 9px; border-radius: 50%;
+        background: var(--accent);
+        flex: none;
+      }
+
+      /* ---------- Nav ---------- */
+      .nav {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        background: var(--surface);
+        border-bottom: 1px solid var(--line);
+      }
+      .nav .wrap {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2px 4px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+      }
+      .nav a {
+        color: var(--ink-soft);
+        text-decoration: none;
+        font-size: 0.94rem;
+        font-weight: 600;
+        padding: 6px 11px;
+        border-radius: 6px;
+      }
+      .nav a:hover { background: var(--surface-2); color: var(--ink); }
+      .nav a.active { background: var(--accent-soft); color: var(--accent-ink); }
+
+      /* ---------- Layout ---------- */
+      main .wrap { padding-top: 10px; padding-bottom: 8px; }
+      section.block { padding: 30px 0 8px; scroll-margin-top: 64px; }
+      .sec-head {
+        display: flex;
+        align-items: baseline;
+        gap: 14px;
+        border-bottom: 2px solid var(--ink);
+        padding-bottom: 8px;
+        margin-bottom: 20px;
+      }
+      .sec-head h2 {
+        margin: 0;
+        font-size: 1.55rem;
+        font-weight: 700;
+      }
+      .sec-head .sec-note {
+        margin-left: auto;
+        color: var(--ink-faint);
+        font-size: 0.92rem;
+        text-align: right;
+      }
+      p.lede { font-size: 1.06rem; color: var(--ink); max-width: 68ch; margin: 0 0 12px; }
+      p.body { color: var(--ink-soft); max-width: 72ch; margin: 0 0 12px; }
+
+      /* ---------- Summary ---------- */
+      .summary-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px 34px;
+      }
+      .summary-list li {
+        padding-left: 22px;
+        position: relative;
+        color: var(--ink-soft);
+      }
+      .summary-list li::before {
+        content: "";
+        position: absolute;
+        left: 2px; top: 0.52em;
+        width: 7px; height: 7px;
+        background: var(--accent);
+        border-radius: 2px;
+      }
+      .summary-list strong { color: var(--ink); }
+
+      /* ---------- Competencies ---------- */
+      .comp-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+      .comp {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        padding: 18px 20px;
+        box-shadow: var(--shadow);
+      }
+      .comp h3 { margin: 0 0 8px; font-size: 1.08rem; font-weight: 600; }
+      .comp p { margin: 0; color: var(--ink-soft); font-size: 0.98rem; }
+      .comp.wide { grid-column: 1 / -1; }
+      .tool-list {
+        display: flex; flex-wrap: wrap; gap: 8px;
+        margin-top: 4px;
+      }
+      .tool {
+        background: var(--chip-bg);
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 4px 13px;
+        font-size: 0.92rem;
+        font-weight: 600;
+        color: var(--ink);
+      }
+
+      /* ---------- Case studies ---------- */
+      .case {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        box-shadow: var(--shadow);
+        padding: 24px 26px;
+        margin-bottom: 18px;
+      }
+      .case-top {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        gap: 4px 14px;
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 12px;
+        margin-bottom: 14px;
+      }
+      .case-top h3 { margin: 0; font-size: 1.28rem; font-weight: 700; }
+      .case-org { font-weight: 600; color: var(--accent-ink); }
+      .case-dates { margin-left: auto; color: var(--ink-faint); font-size: 0.94rem; white-space: nowrap; }
+      .case p { margin: 0 0 12px; color: var(--ink-soft); max-width: 74ch; }
+      .case p strong { color: var(--ink); }
+      .case ul { margin: 0 0 4px; padding-left: 20px; color: var(--ink-soft); }
+      .case li { margin-bottom: 5px; }
+      .case li strong { color: var(--ink); }
+      .scale-row {
+        display: flex; flex-wrap: wrap; gap: 8px;
+        margin-top: 14px;
+      }
+      .scale {
+        background: var(--accent-soft);
+        color: var(--accent-ink);
+        border-radius: 8px;
+        padding: 6px 13px;
+        font-size: 0.93rem;
+        font-weight: 600;
+      }
+
+      /* ---------- Samples ---------- */
+      .sample {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        box-shadow: var(--shadow);
+        padding: 24px 26px;
+        margin-bottom: 18px;
+      }
+      .sample-head {
+        display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px;
+        margin-bottom: 6px;
+      }
+      .sample-head h3 { margin: 0; font-size: 1.22rem; font-weight: 700; }
+      .sample-tag {
+        background: var(--gold);
+        color: #fff;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.6px;
+        text-transform: uppercase;
+        padding: 3px 10px;
+        border-radius: 999px;
+      }
+      @media (prefers-color-scheme: dark) {
+        .sample-tag { color: #1c1a10; }
+      }
+      .sample p { color: var(--ink-soft); margin: 0 0 14px; max-width: 74ch; }
+      .doc {
+        background: var(--surface-2);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 18px 20px;
+        font-size: 0.96rem;
+      }
+      .doc h4 {
+        margin: 0 0 10px;
+        font-family: "Source Serif 4", Georgia, serif;
+        font-size: 1.05rem;
+      }
+      .doc .meta { color: var(--ink-faint); margin: 0 0 12px; }
+      .doc table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.93rem;
+      }
+      .doc th, .doc td {
+        text-align: left;
+        padding: 8px 10px;
+        border-bottom: 1px solid var(--line);
+        vertical-align: top;
+      }
+      .doc th { font-weight: 700; color: var(--ink); border-bottom: 2px solid var(--line-strong); }
+      .doc tr:last-child td { border-bottom: none; }
+      .status {
+        font-weight: 700;
+        font-size: 0.85rem;
+        white-space: nowrap;
+      }
+      .status.done { color: var(--accent); }
+      .status.prog { color: var(--gold); }
+      .status.wait { color: var(--ink-faint); }
+      .doc ol, .doc ul { margin: 0 0 6px; padding-left: 22px; color: var(--ink-soft); }
+      .doc li { margin-bottom: 6px; }
+      .doc li strong { color: var(--ink); }
+      .doc .sub { font-weight: 700; color: var(--ink); margin: 14px 0 6px; }
+      .doc .sub:first-of-type { margin-top: 4px; }
+      .steps { counter-reset: step; list-style: none; padding-left: 0; margin: 0; }
+      .steps li {
+        position: relative;
+        padding-left: 44px;
+        margin-bottom: 13px;
+        color: var(--ink-soft);
+      }
+      .steps li::before {
+        counter-increment: step;
+        content: counter(step);
+        position: absolute;
+        left: 0; top: 1px;
+        width: 28px; height: 28px;
+        border-radius: 50%;
+        background: var(--accent);
+        color: #fff;
+        font-weight: 700;
+        font-size: 0.92rem;
+        display: flex; align-items: center; justify-content: center;
+      }
+      @media (prefers-color-scheme: dark) {
+        .steps li::before { color: #10241c; }
+      }
+      .steps li strong { color: var(--ink); display: block; }
+
+      /* ---------- Experience ---------- */
+      .exp-list { display: grid; gap: 0; }
+      .exp {
+        display: grid;
+        grid-template-columns: 172px 1fr;
+        gap: 6px 26px;
+        padding: 15px 0;
+        border-bottom: 1px solid var(--line);
+      }
+      .exp:last-child { border-bottom: none; }
+      .exp .when { color: var(--ink-faint); font-size: 0.95rem; padding-top: 2px; }
+      .exp h3 { margin: 0; font-size: 1.06rem; font-family: "Source Sans 3", sans-serif; font-weight: 700; }
+      .exp .org { color: var(--accent-ink); font-weight: 600; }
+      .exp p { margin: 4px 0 0; color: var(--ink-soft); font-size: 0.97rem; max-width: 72ch; }
+
+      /* ---------- Education ---------- */
+      .two-col {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px 34px;
+      }
+      .edu-item { border-bottom: 1px solid var(--line); padding: 12px 0; }
+      .edu-item:last-child { border-bottom: none; }
+      .edu-item h3 { margin: 0; font-size: 1.04rem; font-family: "Source Sans 3", sans-serif; font-weight: 700; }
+      .edu-item p { margin: 3px 0 0; color: var(--ink-soft); font-size: 0.96rem; }
+      .plain-list { list-style: none; margin: 0; padding: 0; }
+      .plain-list li { padding: 9px 0; border-bottom: 1px solid var(--line); color: var(--ink-soft); }
+      .plain-list li:last-child { border-bottom: none; }
+      .plain-list strong { color: var(--ink); }
+
+      /* ---------- Footer / contact ---------- */
+      footer {
+        margin-top: 44px;
+        background: var(--surface);
+        border-top: 3px solid var(--accent);
+      }
+      footer .wrap { padding-top: 30px; padding-bottom: 36px; }
+      footer h2 { margin: 0 0 8px; font-size: 1.5rem; }
+      footer p { color: var(--ink-soft); margin: 0 0 14px; max-width: 66ch; }
+      .contact-cards {
+        display: flex; flex-wrap: wrap; gap: 10px;
+        margin-bottom: 18px;
+      }
+      .contact-cards a, .contact-cards button {
+        display: inline-flex; align-items: center; gap: 8px;
+        background: var(--chip-bg);
+        border: 1px solid var(--line-strong);
+        color: var(--ink);
+        border-radius: 8px;
+        padding: 9px 16px;
+        font: inherit;
+        font-size: 0.97rem;
+        font-weight: 600;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      .contact-cards a:hover, .contact-cards button:hover { border-color: var(--accent); color: var(--accent-ink); }
+      .copy-note { font-size: 0.9rem; color: var(--accent); font-weight: 600; min-height: 1.2em; margin: 0 0 6px; }
+      .fineprint { font-size: 0.88rem; color: var(--ink-faint); margin-top: 10px; }
+
+      /* ---------- Responsive ---------- */
+      @media (max-width: 720px) {
+        body { font-size: 16px; }
+        .summary-list, .comp-grid, .two-col { grid-template-columns: 1fr; }
+        .exp { grid-template-columns: 1fr; gap: 2px; }
+        .exp .when { order: 2; }
+        .case, .sample { padding: 19px 17px; }
+        .case-dates { margin-left: 0; }
+        .sec-head .sec-note { display: none; }
+        .doc { padding: 14px 16px; }
+        .doc table, .doc thead, .doc tbody, .doc tr, .doc td { display: block; width: 100%; }
+        .doc thead { position: absolute; left: -9999px; top: -9999px; }
+        .doc tr { padding: 10px 0 4px; border-bottom: 1px solid var(--line); }
+        .doc tr:last-child { border-bottom: none; }
+        .doc td { border-bottom: none; padding: 3px 0; }
+        .doc td.cell-item { font-weight: 700; color: var(--ink); padding-bottom: 5px; }
+        .doc td[data-label]::before {
+          content: attr(data-label);
+          display: inline-block;
+          min-width: 86px;
+          font-weight: 700;
+          font-size: 0.8rem;
+          letter-spacing: 0.4px;
+          text-transform: uppercase;
+          color: var(--ink-faint);
+        }
+        .masthead .wrap { padding-top: 32px; padding-bottom: 26px; }
+      }
+
+      /* ---------- Print ---------- */
+      @media print {
+        .nav, .contact-cards button { display: none; }
+        body { background: #fff; font-size: 12pt; }
+        .case, .sample, .comp { box-shadow: none; break-inside: avoid; }
+        section.block { padding-top: 18px; }
+      }
+    </style>
+  </head>
+  <body>
+
+    <header class="masthead">
+      <div class="wrap">
+        <h1 class="name">Rasadari Ranasinghe</h1>
+        <p class="role-line">Administrative Assistant&nbsp;&nbsp;|&nbsp;&nbsp;Office Administration, Coordination &amp; Client Support</p>
+        <p class="contact-row">
+          <span class="item">Toronto, ON</span>
+          <span class="item"><a href="mailto:rasadariravihari@gmail.com">rasadariravihari@gmail.com</a></span>
+          <span class="item"><a href="tel:+16475109744">(647) 510-9744</a></span>
+          <span class="item"><a href="https://www.linkedin.com/in/rasadari-ranasinghe-815486254/" target="_blank" rel="noopener">LinkedIn</a></span>
+          <span class="item"><a href="https://github.com/rasadariranasinghe" target="_blank" rel="noopener">GitHub</a></span>
+        </p>
+        <span class="avail"><span class="dot" aria-hidden="true"></span>Available to start immediately</span>
+      </div>
+    </header>
+
+    <nav class="nav" aria-label="Portfolio sections">
+      <div class="wrap">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#work">Work Examples</a>
+        <a href="#skills">Skills</a>
+        <a href="#samples">Samples</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <main>
+      <div class="wrap">
+
+        <section class="block" id="about">
+          <div class="sec-head">
+            <h2>Professional Summary</h2>
+          </div>
+          <p class="lede">Administrative professional with experience across banking operations, university program coordination, pharmacy admin, and ESG coordination. My work centres on keeping busy offices organized: calendars, records, correspondence, and follow-through that other people can rely on.</p>
+          <ul class="summary-list">
+            <li><strong>Coordination:</strong> calendar and schedule management, meeting coordination, agenda preparation, and deadline tracking across competing priorities</li>
+            <li><strong>Records and data:</strong> data entry, data validation, and verification; confidential records management for KYC documentation, account records, and management reports</li>
+            <li><strong>Reporting:</strong> advanced Excel reporting, trackers, status updates, and summaries prepared for management and stakeholder review</li>
+            <li><strong>Client service:</strong> front-desk reception, client inquiries, appointment booking, professional correspondence, follow-ups, and issue escalation</li>
+            <li><strong>Virtual assistance:</strong> remote inbox and calendar management, document preparation, and organized record keeping for clients</li>
+            <li><strong>Communication:</strong> clear, courteous written and verbal communication with clients, faculty, and stakeholders in English and Sinhala</li>
+          </ul>
+        </section>
+
+<section class="block" id="experience">
+          <div class="sec-head">
+            <h2>Experience</h2>
+            <span class="sec-note">Full role history</span>
+          </div>
+          <div class="exp-list">
+            <div class="exp">
+              <div class="when">May 2026 - Present</div>
+              <div>
+                <h3>ESG Coordinator <span class="org">| Vosyn Inc., Toronto, ON</span></h3>
+                <p>Coordinate ESG and sustainability research and reporting workflows; prepare trackers, documentation, and reports for stakeholder review; validate data and manage multiple deadlines.</p>
+              </div>
+            </div>
+            <div class="exp">
+              <div class="when">Apr 2026 - Present</div>
+              <div>
+                <h3>Data Reporting Analyst (Volunteer) <span class="org">| U+ Education, Markham, ON</span></h3>
+                <p>Administrative and coordination support for a community education nonprofit; records, trackers, and database maintenance across 147,000+ records; updates and documentation for program reporting.</p>
+              </div>
+            </div>
+            <div class="exp">
+              <div class="when">Jan 2026 - Present</div>
+              <div>
+                <h3>Virtual Assistant (Freelance) <span class="org">| Upwork, Remote</span></h3>
+                <p>Email and calendar management, scheduling, professional correspondence, document preparation, and accurate data entry for remote clients.</p>
+              </div>
+            </div>
+            <div class="exp">
+              <div class="when">May 2025 - Apr 2026</div>
+              <div>
+                <h3>Product Coordinator <span class="org">| GQ Consultancy Inc., Brampton, ON</span></h3>
+                <p>Coordinated scheduling and meetings across a remote team; shared communications and follow-ups; maintained documentation, meeting notes, and electronic records; prepared status reports for management review.</p>
+              </div>
+            </div>
+            <div class="exp">
+              <div class="when">Aug 2023 - Dec 2024</div>
+              <div>
+                <h3>Operations Assistant <span class="org">| People's Bank, Sri Lanka</span></h3>
+                <p>Primary client contact; 200-300 cash transactions daily; KYC documentation review for account openings; branch operations reports for management; filing and records under internal controls.</p>
+              </div>
+            </div>
+            <div class="exp">
+              <div class="when">Aug 2022 - Aug 2023</div>
+              <div>
+                <h3>TA - Program Coordinator <span class="org">| University of Colombo, Sri Lanka</span></h3>
+                <p>First point of contact for 200+ students and 20+ faculty; scheduled lectures, meetings, and examinations; managed faculty calendars; maintained filing systems and confidential records; prepared reports and summaries.</p>
+              </div>
+            </div>
+            <div class="exp">
+              <div class="when">Jan 2017 - Dec 2017</div>
+              <div>
+                <h3>Banking Assistant <span class="org">| People's Bank, Gampaha, Sri Lanka</span></h3>
+                <p>Processed branch cash transactions accurately; courteous front-line client service and account inquiries; reviewed KYC documentation for new account openings; maintained transaction records.</p>
+              </div>
+            </div>
+            <div class="exp">
+              <div class="when">Sep 2016 - Dec 2016</div>
+              <div>
+                <h3>Billing &amp; Administrative Assistant <span class="org">| Sethma Pharmacy, Gampaha, Sri Lanka</span></h3>
+                <p>Prepared bills, invoices, and receipts; maintained sales and inventory records; greeted and assisted customers.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+<section class="block" id="work">
+          <div class="sec-head">
+            <h2>Work Examples</h2>
+            <span class="sec-note">Selected work from my roles, with the scale of each</span>
+          </div>
+
+          <article class="case">
+            <div class="case-top">
+              <h3>Program Coordination for a Full Academic Program</h3>
+              <span class="case-org">University of Colombo</span>
+              <span class="case-dates">Aug 2022 - Aug 2023</span>
+            </div>
+            <p>As <strong>Teaching Assistant and Program Coordinator</strong>, I was the first point of contact for the program's students and faculty, and the person who kept its schedule, records, and communications running day to day.</p>
+            <ul>
+              <li>Served as first point of contact for <strong>200+ students and 20+ professors and lecturers</strong>, handling phone and email inquiries</li>
+              <li>Scheduled meetings, lectures, and examinations; coordinated logistics and distributed agendas and materials ahead of time</li>
+              <li>Managed academic calendars for 20+ faculty members, balancing competing priorities across the program</li>
+              <li>Maintained electronic and physical filing systems and handled confidential student and faculty records with discretion</li>
+              <li>Prepared reports and summaries for faculty and management review</li>
+            </ul>
+            <div class="scale-row">
+              <span class="scale">200+ students supported</span>
+              <span class="scale">20+ faculty calendars</span>
+              <span class="scale">Lectures, meetings, and exams scheduled</span>
+            </div>
+          </article>
+
+          <article class="case">
+            <div class="case-top">
+              <h3>High-Volume Branch Operations and KYC Review</h3>
+              <span class="case-org">People's Bank, Sri Lanka</span>
+              <span class="case-dates">Aug 2023 - Dec 2024</span>
+            </div>
+            <p>As <strong>Operations Assistant</strong> in a busy bank branch, I combined front-line client service with back-office accuracy: high transaction volumes, documentation review, and reporting that branch management relied on.</p>
+            <ul>
+              <li>Processed <strong>200-300 cash transactions daily</strong> in a fast-paced front office, keeping records accurate</li>
+              <li>Reviewed account opening documentation, including <strong>KYC requirements</strong>, for completeness before processing</li>
+              <li>Prepared, reviewed, and distributed branch operations reports for management review</li>
+              <li>Served as a primary client contact for account inquiries, building trusted client relationships</li>
+              <li>Maintained organized filing and records in line with internal controls, handling confidential information with discretion</li>
+              <li>Answered phones, greeted clients, and provided scheduling and administrative support to branch management</li>
+            </ul>
+            <div class="scale-row">
+              <span class="scale">200-300 transactions per day</span>
+              <span class="scale">KYC documentation review</span>
+              <span class="scale">Daily management reporting</span>
+            </div>
+          </article>
+
+          <article class="case">
+            <div class="case-top">
+              <h3>Remote Virtual Assistance: Inbox, Calendar, and Follow-Ups</h3>
+              <span class="case-org">Upwork, Remote</span>
+              <span class="case-dates">Jan 2026 - Present</span>
+            </div>
+            <p>As a <strong>freelance Virtual Assistant</strong>, I support remote clients with the recurring administrative work that keeps their weeks organized: email, scheduling, correspondence, and data entry.</p>
+            <ul>
+              <li>Manage <strong>email and calendars</strong> for remote clients, scheduling appointments and keeping records organized and up to date</li>
+              <li>Handle professional client correspondence with clear, courteous communication</li>
+              <li>Track follow-ups so open items are answered and closed rather than lost in the inbox</li>
+              <li>Prepare documents and perform accurate data entry to client specifications and deadlines</li>
+            </ul>
+            <div class="scale-row">
+              <span class="scale">Email and calendar management</span>
+              <span class="scale">Scheduling and follow-ups</span>
+              <span class="scale">Data entry and documents</span>
+            </div>
+          </article>
+
+          <article class="case">
+            <div class="case-top">
+              <h3>ESG Coordination: Trackers, Timelines, and Deliverables</h3>
+              <span class="case-org">Vosyn Inc., Toronto, ON</span>
+              <span class="case-dates">May 2026 - Present</span>
+            </div>
+            <p>As <strong>ESG Coordinator</strong>, I coordinate sustainability research and reporting workflows, keeping documentation, timelines, and deliverables organized across multiple assignments.</p>
+            <ul>
+              <li>Coordinate ESG and sustainability research and reporting workflows, tracking documentation, timelines, and deliverables</li>
+              <li>Prepare and maintain <strong>trackers, research documentation, and reports</strong> for stakeholder review</li>
+              <li>Validate data and review materials for accuracy and completeness before they go out</li>
+              <li>Manage multiple assignments and deadlines in parallel, flagging items that need attention</li>
+            </ul>
+            <div class="scale-row">
+              <span class="scale">Deliverable tracking</span>
+              <span class="scale">Data validation</span>
+              <span class="scale">Stakeholder-ready reports</span>
+            </div>
+          </article>
+
+          <article class="case">
+            <div class="case-top">
+              <h3>Records and Reporting Across 147,000+ Records</h3>
+              <span class="case-org">U+ Education, Markham, ON</span>
+              <span class="case-dates">Apr 2026 - Present</span>
+            </div>
+            <p>As a volunteer <strong>Data Reporting Analyst</strong> with a community education nonprofit, I provide administrative and coordination support alongside large-scale records work.</p>
+            <ul>
+              <li>Perform accurate data entry and database maintenance across <strong>147,000+ records</strong></li>
+              <li>Maintain organized records, trackers, and databases that program reporting depends on</li>
+              <li>Prepare updates and documentation for program reporting</li>
+              <li>Support scheduling and stakeholder communication for the organization</li>
+            </ul>
+            <div class="scale-row">
+              <span class="scale">147,000+ records maintained</span>
+              <span class="scale">Trackers and databases</span>
+              <span class="scale">Program reporting support</span>
+            </div>
+          </article>
+
+          <article class="case">
+            <div class="case-top">
+              <h3>Billing, Invoices, and Front-Counter Service</h3>
+              <span class="case-org">Sethma Pharmacy, Gampaha, Sri Lanka</span>
+              <span class="case-dates">Sep 2016 - Dec 2016</span>
+            </div>
+            <p>As <strong>Billing and Administrative Assistant</strong>, I handled the pharmacy's daily billing paperwork and its front counter, where accuracy and patience both mattered.</p>
+            <ul>
+              <li>Prepared <strong>bills, invoices, and receipts</strong> and maintained organized sales and inventory records</li>
+              <li>Greeted and assisted customers, handling inquiries with patience and professionalism</li>
+              <li>Kept daily records tidy and reconciled so the team could rely on them at close of day</li>
+            </ul>
+            <div class="scale-row">
+              <span class="scale">Invoices and receipts</span>
+              <span class="scale">Sales and inventory records</span>
+              <span class="scale">Front-counter service</span>
+            </div>
+          </article>
+        </section>
+
+<section class="block" id="skills">
+          <div class="sec-head">
+            <h2>Core Competencies</h2>
+          </div>
+          <div class="comp-grid">
+            <div class="comp">
+              <h3>Administrative and Clerical</h3>
+              <p>Calendar and schedule management, meeting coordination, document preparation, correspondence, filing, data entry, deadline tracking</p>
+            </div>
+            <div class="comp">
+              <h3>Office and Program Support</h3>
+              <p>Front-desk reception, event coordination, stakeholder communication, follow-ups, process documentation</p>
+            </div>
+            <div class="comp">
+              <h3>Records and Data</h3>
+              <p>Data entry and verification, data validation, electronic and hard-copy filing, confidential records handling, Excel reporting</p>
+            </div>
+            <div class="comp">
+              <h3>Client Service</h3>
+              <p>Client inquiries, account documentation, professional written and verbal communication, issue escalation</p>
+            </div>
+            <div class="comp wide">
+              <h3>Software and Tools</h3>
+              <div class="tool-list">
+                <span class="tool">Microsoft Word</span>
+                <span class="tool">Excel</span>
+                <span class="tool">PowerPoint</span>
+                <span class="tool">Outlook</span>
+                <span class="tool">Teams</span>
+                <span class="tool">Google Workspace</span>
+                <span class="tool">Salesforce</span>
+                <span class="tool">Tableau</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+<section class="block" id="samples">
+          <div class="sec-head">
+            <h2>Sample Deliverables</h2>
+            <span class="sec-note">How I structure the documents I work with every week</span>
+          </div>
+          <p class="body">The three samples below are illustrative examples I created for this portfolio, based on the real workflows from my coordination and assistant roles. They are not documents from any employer; names, dates, and items are generic so the formats can speak for themselves.</p>
+
+          <article class="sample">
+            <div class="sample-head">
+              <h3>Coordination Tracker</h3>
+              <span class="sample-tag">Sample</span>
+            </div>
+            <p>The format I use to keep multi-person work visible: every open item has an owner, a due date, a status, and a next step, so nothing depends on memory.</p>
+            <div class="doc">
+              <h4>Weekly Coordination Tracker</h4>
+              <table>
+                <thead>
+                  <tr><th>Item</th><th>Owner</th><th>Due</th><th>Status</th><th>Next step</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td class="cell-item">Confirm next week's meeting schedule</td><td data-label="Owner">Coordinator</td><td data-label="Due">Mon</td><td data-label="Status" class="status done">Complete</td><td data-label="Next step">Invitations sent; materials attached</td></tr>
+                  <tr><td class="cell-item">Collect documents for review</td><td data-label="Owner">Team members</td><td data-label="Due">Wed</td><td data-label="Status" class="status prog">In progress</td><td data-label="Next step">Reminder sent to two outstanding contributors</td></tr>
+                  <tr><td class="cell-item">Prepare summary report for management</td><td data-label="Owner">Coordinator</td><td data-label="Due">Thu</td><td data-label="Status" class="status prog">In progress</td><td data-label="Next step">Draft figures checked against source records</td></tr>
+                  <tr><td class="cell-item">Book room and send agenda</td><td data-label="Owner">Coordinator</td><td data-label="Due">Fri</td><td data-label="Status" class="status wait">Scheduled</td><td data-label="Next step">Agenda to circulate one day before the meeting</td></tr>
+                  <tr><td class="cell-item">File signed documents and update records</td><td data-label="Owner">Admin support</td><td data-label="Due">Fri</td><td data-label="Status" class="status wait">Awaiting input</td><td data-label="Next step">File once signed copies are returned</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+
+          <article class="sample">
+            <div class="sample-head">
+              <h3>Meeting Agenda and Minutes</h3>
+              <span class="sample-tag">Sample</span>
+            </div>
+            <p>Agendas go out before the meeting with owners and time allocations; minutes come back in the same document, so decisions and action items are easy to find later.</p>
+            <div class="doc">
+              <h4>Team Coordination Meeting</h4>
+              <p class="meta">Date: Tuesday, 10:00 - 10:45 AM&nbsp;&nbsp;|&nbsp;&nbsp;Location: Video call&nbsp;&nbsp;|&nbsp;&nbsp;Chair: Coordinator&nbsp;&nbsp;|&nbsp;&nbsp;Attendees: Team members and stakeholders</p>
+              <p class="sub">Agenda</p>
+              <ol>
+                <li><strong>Review of last week's action items</strong> (10 min): status of each open item and anything blocked</li>
+                <li><strong>Schedule for the coming week</strong> (10 min): confirm meetings, deadlines, and coverage</li>
+                <li><strong>Documents in progress</strong> (15 min): reviews due, outstanding inputs, sign-offs needed</li>
+                <li><strong>Issues and escalations</strong> (5 min): items needing a decision from management</li>
+                <li><strong>Any other business</strong> (5 min)</li>
+              </ol>
+              <p class="sub">Minutes format</p>
+              <ul>
+                <li><strong>Decisions:</strong> recorded in one line each, with who decided and when it takes effect</li>
+                <li><strong>Action items:</strong> task, owner, and due date, carried into the coordination tracker</li>
+                <li><strong>Open questions:</strong> parked items with a named person responsible for the answer</li>
+                <li>Minutes circulated the same day; corrections requested within one business day</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="sample">
+            <div class="sample-head">
+              <h3>Follow-Up Workflow</h3>
+              <span class="sample-tag">Sample</span>
+            </div>
+            <p>The routine I follow so requests made by email, phone, or in meetings are answered on time. It is the same whether the request comes from a client, a student, or a manager.</p>
+            <div class="doc">
+              <ol class="steps">
+                <li><strong>Log it the same day</strong>Every request is entered in the tracker with the date received, who it came from, what is needed, and the deadline.</li>
+                <li><strong>Acknowledge receipt</strong>The sender gets a short confirmation the same business day, with the date they can expect the completed item.</li>
+                <li><strong>Do the work or route it</strong>If the item belongs to someone else, it is forwarded with full context and the deadline, not just passed along.</li>
+                <li><strong>Send one reminder before the deadline</strong>A polite nudge two days before the due date if input is still outstanding, referencing the original request.</li>
+                <li><strong>Escalate early, not late</strong>If a deadline is at risk, the coordinator flags it to the requester with a revised date before the deadline passes.</li>
+                <li><strong>Close the loop and file</strong>The completed item is sent, the tracker is marked complete, and the correspondence is filed where the team can find it.</li>
+              </ol>
+            </div>
+          </article>
+        </section>
+
+<section class="block" id="education">
+          <div class="sec-head">
+            <h2>Education, Certifications, and Languages</h2>
+          </div>
+          <div class="two-col">
+            <div>
+              <div class="edu-item">
+                <h3>Certificate in Data Analytics</h3>
+                <p>University of Toronto School of Continuing Studies, Toronto, ON&nbsp;&nbsp;|&nbsp;&nbsp;2024</p>
+              </div>
+              <div class="edu-item">
+                <h3>B.Sc., Environmental Sciences (First Class Honours)</h3>
+                <p>University of Colombo, Sri Lanka&nbsp;&nbsp;|&nbsp;&nbsp;2018 - 2022</p>
+              </div>
+              <div class="edu-item">
+                <h3>Languages</h3>
+                <p>English (fluent)&nbsp;&nbsp;|&nbsp;&nbsp;Sinhala (fluent)</p>
+              </div>
+            </div>
+            <div>
+              <ul class="plain-list">
+                <li><strong>Salesforce Agentforce Specialist</strong>, Salesforce (2025)</li>
+                <li><strong>First-author publication</strong> in Urban Ecosystems (Springer, 2025)</li>
+                <li><strong>YRES Volunteer Appreciation Award</strong>, 2026</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+    <footer id="contact">
+      <div class="wrap">
+        <h2>Contact</h2>
+        <p>I am based in Toronto, ON, and available to start immediately in administrative, coordination, and office support roles, on-site, hybrid, or remote. The fastest way to reach me is by email.</p>
+        <div class="contact-cards">
+          <a href="mailto:rasadariravihari@gmail.com">rasadariravihari@gmail.com</a>
+          <a href="tel:+16475109744">(647) 510-9744</a>
+          <a href="https://www.linkedin.com/in/rasadari-ranasinghe-815486254/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/rasadariranasinghe" target="_blank" rel="noopener">GitHub</a>
+          <button type="button" id="copyEmail">Copy email address</button>
+        </div>
+        <p class="copy-note" id="copyNote" role="status" aria-live="polite"></p>
+        <p class="fineprint">Toronto, ON&nbsp;&nbsp;|&nbsp;&nbsp;Languages: English and Sinhala&nbsp;&nbsp;|&nbsp;&nbsp;Sample deliverables on this page are illustrative examples based on my real workflows, not employer documents.</p>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        var btn = document.getElementById("copyEmail");
+        var note = document.getElementById("copyNote");
+        var email = "rasadariravihari@gmail.com";
+        if (btn) {
+          btn.addEventListener("click", function () {
+            function done() {
+              note.textContent = "Email address copied: " + email;
+              setTimeout(function () { note.textContent = ""; }, 4000);
+            }
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+              navigator.clipboard.writeText(email).then(done, function () {
+                note.textContent = "Email: " + email;
+              });
+            } else {
+              var ta = document.createElement("textarea");
+              ta.value = email;
+              document.body.appendChild(ta);
+              ta.select();
+              try { document.execCommand("copy"); done(); }
+              catch (e) { note.textContent = "Email: " + email; }
+              document.body.removeChild(ta);
+            }
+          });
+        }
+
+        var links = Array.prototype.slice.call(document.querySelectorAll(".nav a"));
+        var sections = links.map(function (a) {
+          return document.querySelector(a.getAttribute("href"));
+        }).filter(Boolean);
+        if ("IntersectionObserver" in window && sections.length) {
+          var obs = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                links.forEach(function (a) {
+                  a.classList.toggle("active", a.getAttribute("href") === "#" + entry.target.id);
+                });
+              }
+            });
+          }, { rootMargin: "-30% 0px -60% 0px" });
+          sections.forEach(function (s) { obs.observe(s); });
+        }
+      })();
+    </script>
+  </body>
+</html>
